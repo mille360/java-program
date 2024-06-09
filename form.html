@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>cal.form</title>
+</head>
+
+<body>
+    <form name="formula" onsubmit="return calculation()" method="post">
+        <p>Enter first number</p>
+        <input type="text" id="fnumber" required>
+        <p>Enter second number</p>
+        <input type="text" id="snumber" required>
+        <p>Enter an operation</p>
+        <select id="opp">
+            <option value="Addition">Addition</option>
+            <option value="Substraction">Substraction</option>
+            <option value="Multiplication">Multiplication</option>
+            <option value="Division">Division</option>
+        </select>
+        <input type="submit">
+        <p id="res">jjjj</p>
+    </form>
+    <script>
+Function calculation(){
+            var x = parseFloat(document.getElementById("fnumber").value);
+            var y = parseFloat(document.getElementById("snumber").value);
+            var z = document.getElementById("opp").value;
+            var k;
+            If(z == "Addition"){
+                k = x + y;
+            }
+            console.log(k);
+            document.getElementById("res").innerHTML(k).remove();
+        }
+    </script>
+</body>
+
+</html>
